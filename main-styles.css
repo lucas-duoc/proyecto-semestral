@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 128px;
+}
+
+.navbar {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+}
+
+.navbar-brand {
+    text-decoration: none;
+}
+
+.navbar-icon {
+    color: #ffffff;
+    margin-right: 4px;
+}
+
+.navbar-text {
+    color: #ffffff;
+}
+
+.navbar-menu {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+}
+
+.navbar-menu a,
+.home-button-start
+{
+    background-color: #ffffff;
+    color: #000000;
+    padding: 4px 8px;
+    text-decoration: none;
+    transition: color 256ms;
+}
+
+.navbar-menu a:hover,
+.home-button-start:hover
+{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.home-brand-icon {
+    font-size: 64px;
+}
+
+.home-subtitle {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.home-button-start {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
+    padding: 8px 16px;
+}
+
+.auth-form {
+    border: 1px solid #ffffff;
+    padding: 32px;
+    min-width: 512px;
+}
+
+.auth-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.auth-row {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+input {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    padding: 8px;
+    outline: none;
+    border: 1px solid #2c2c2c;
+    transition: border-color 256ms;
+    caret-color: #ffffff;
+}
+
+input:focus {
+    border-color: #ffffff;
+}
+
+.login-button {
+    background-color: #ffffff;
+    color: #000000;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 256ms, color 256ms;
+}
+
+.login-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.auth-footer {
+    text-align: center;
+    font-size: 12px;
+    color: #8b949e;
+}
