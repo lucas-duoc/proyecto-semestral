@@ -36,7 +36,7 @@ function validate_register_submit(event) {
 
     add_user_to_database(new_user);
 
-    alert("Usuario registrado con éxito.")
+    window.location = "login.html"
 }
 
 formulario.addEventListener("submit", validate_register_submit);
