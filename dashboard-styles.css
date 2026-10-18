@@ -88,3 +88,63 @@ h2 {
 #users-table tbody tr:hover {
     background-color: #222222;
 }
+
+.option-buttons {
+    margin-bottom: 16px;
+}
+
+.modal {
+    background-color: #000000;
+    color:white;
+    width: 512px;
+    padding: 16px;
+    border: 1px solid solid white;
+    margin: auto;
+}
+
+.modal-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.modal-field {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+button {
+    background-color: white;
+    color: #000000;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+}
+
+input {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    padding: 4px;
+    outline: none;
+    border: 1px solid #2c2c2c;
+    caret-color: #ffffff;
+    flex: 1;
+}
+
+input:focus {
+    border-color: #ffffff;
+}
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-footer {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}

@@ -12,7 +12,6 @@
             <span class="navbar-icon">Ѫ</span>
             <span class="navbar-text">Proyecto Gimnasio</span>
         </a>
-
         <ul class="sidebar-menu">
             <li><a href="#">Inicio</a></li>
             <li><a href="dashboard-users.html" class="active">Usuarios</a></li>
@@ -23,16 +22,70 @@
         <h1>Usuarios</h1>
         <p>Gestor de usuarios registrados en el sistema.</p>
         <h2>Lista de usuarios</h2>
-        <table id="users-table">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Correo electrónico</th>
-                    <th>Fecha de registro</th>
-                </tr>
-            </thead>
-            <tbody id="users-table-body"></tbody>
-        </table>
+            <div class="option-buttons">
+                <button type="button" id="modal-open-create">Crear usuario</button>
+                <button type="button" id="modal-open-update">Modificar usuario</button>
+                <button type="button" id="modal-open-delete">Eliminar usuario</button>
+            </div>
+            <table id="users-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo electrónico</th>
+                        <th>Fecha de registro</th>
+                    </tr>
+                </thead>
+                <tbody id="users-table-body"></tbody>
+            </table>
+        <dialog class="modal" id="create-user-modal">
+            <h2 class="modal-title">Crear usuario</h2>
+            <div class="modal-field email-id">
+                <label for="user-email-create">Email (UID):</label>
+                <input type="text" id="user-email-create"></input>
+            </div>
+            <div class="modal-field">
+                <label for="user-name-create">Nombre:</label>
+                <input type="text" id="user-name-create"></input>
+            </div>
+            <div class="modal-field">
+                <label for="user-password-create">Contraseña:</label>
+                <input type="text" id="user-password-create"></input>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="modal-create-button-close">Cerrar</button>
+                <button type="button" id="modal-create-button-save">Guardar</button>
+            </div>
+        </dialog>
+        <dialog class="modal" id="modify-user-modal">
+            <h2 class="modal-title">Modificar usuario</h2>
+            <div class="modal-field email-id">
+                <label for="user-email-modify">Email (UID):</label>
+                <input type="text" id="user-email-modify">
+            </div>
+            <div class="modal-field">
+                <label for="user-name-modify">Nuevo Nombre:</label>
+                <input type="text" id="user-name-modify">
+            </div>
+            <div class="modal-field">
+                <label for="user-password-modify">Nueva Contraseña:</label>
+                <input type="text" id="user-password-modify">
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="modal-modify-button-close">Cerrar</button>
+                <button type="button" id="modal-modify-button-save">Guardar</button>
+            </div>
+        </dialog>
+        <dialog class="modal" id="delete-user-modal">
+            <h2 class="modal-title">Eliminar usuario</h2>
+            <div class="modal-field email-id">
+                <label for="user-email-delete">Email (UID):</label>
+                <input type="text" id="user-email-delete">
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="modal-delete-button-close">Cerrar</button>
+                <button type="button" id="modal-delete-button-save">Confirmar</button>
+            </div>
+        </dialog>
     </main>
     <script src="storage.js"></script>
     <script src="dashboard-users.js"></script>
