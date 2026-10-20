@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de asistencia - Proyecto Gimnasio</title>
+  <link rel="stylesheet" href="asistencia.css">
+</head>
+<body>
+  <nav class="sidebar" aria-label="Navegación principal">
+    <a class="brand" href="dashboard-users.html">♜ &nbsp; Proyecto Gimnasio</a>
+    <a href="index.html">Inicio</a>
+    <a href="dashboard-users.html">Usuarios</a>
+    <a class="active" href="asistencia.html" aria-current="page">Ver asistencia</a>
+    <a class="logout" href="index.html">Cerrar sesión</a>
+  </nav>
+  <main>
+    <header><h1>Control de asistencia</h1><p>Selecciona un usuario para visualizar y gestionar sus registros de ingreso y salida.</p></header>
+    <section class="layout">
+      <div class="panel">
+        <h2>Lista de usuarios</h2>
+        <label for="buscar">Buscar usuario</label>
+        <input id="buscar" type="search" placeholder="Nombre o correo">
+        <div id="lista-usuarios" class="users" aria-label="Usuarios registrados"></div>
+      </div>
+      <div class="panel">
+        <h2>Usuario seleccionado</h2>
+        <p id="usuario-seleccionado" class="muted">Selecciona un usuario de la lista.</p>
+        <form id="form-asistencia" hidden>
+          <h3 id="form-titulo">Agregar registro</h3>
+          <div class="fields">
+            <div><label for="fecha">Fecha</label><input id="fecha" type="date" required></div>
+            <div><label for="hora">Hora</label><input id="hora" type="time" required></div>
+            <div><label for="tipo">Tipo</label><select id="tipo"><option value="Ingreso">Ingreso</option><option value="Salida">Salida</option></select></div>
+          </div>
+          <div class="actions"><button type="submit" id="guardar">Agregar registro</button><button type="button" id="cancelar" class="secondary" hidden>Cancelar edición</button></div>
+        </form>
+        <h3>Lista de asistencias</h3>
+        <p class="muted" id="mensaje">Selecciona un usuario para ver sus asistencias.</p>
+        <div class="table-wrap"><table id="tabla" hidden><thead><tr><th>Fecha</th><th>Hora</th><th>Tipo</th><th>Acciones</th></tr></thead><tbody id="filas"></tbody></table></div>
+      </div>
+    </section>
+  </main>
+  <script src="storage.js"></script>
+  <script src="asistencia.js"></script>
+</body>
+</html>
