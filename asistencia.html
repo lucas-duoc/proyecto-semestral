@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asistencia - Neo Goku Fit</title>
+  <link rel="stylesheet" href="dashboard-styles.css">
+  <link rel="stylesheet" href="asistencia.css">
+</head>
+<body>
+  <nav class="sidebar">
+    <a href="index.html" class="navbar-brand"><span class="navbar-icon">Ѫ</span><span class="navbar-text">Neo Goku Fit</span></a>
+    <ul class="sidebar-menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="dashboard-users.html">Usuarios</a></li>
+      <li><a href="asistencia.html" class="active">Asistencia</a></li>
+      <li><a href="historial-asistencia.html">Ver historial</a></li>
+      <li><a href="index.html">Cerrar sesión</a></li>
+    </ul>
+  </nav>
+  <main class="asistencia-main">
+    <h1>Registrar asistencia</h1>
+    <p>Selecciona un usuario, indica la fecha y escribe la hora de ingreso, la hora de salida o ambas.</p>
+    <div class="asistencia-layout">
+      <section class="panel">
+        <h2>Lista de usuarios</h2>
+        <label for="buscar-usuario">Buscar usuario</label>
+        <input type="search" id="buscar-usuario" placeholder="Nombre o correo electrónico">
+        <div id="lista-usuarios" class="lista-usuarios" aria-live="polite"></div>
+      </section>
+      <section class="panel">
+        <h2>Usuario seleccionado</h2>
+        <div id="usuario-seleccionado" class="usuario-seleccionado">Selecciona un usuario de la lista.</div>
+        <div id="zona-asistencia" hidden>
+          <h3>Agregar registro</h3>
+          <form id="form-asistencia">
+            <div class="form-grid">
+              <div><label for="fecha-asistencia">Fecha</label><input id="fecha-asistencia" type="date" required></div>
+              <div><label for="hora-ingreso">Hora de ingreso</label><input id="hora-ingreso" type="time"></div>
+              <div><label for="hora-salida">Hora de salida</label><input id="hora-salida" type="time"></div>
+            </div>
+            <div class="acciones"><button type="submit" id="guardar-asistencia">Guardar asistencia</button></div>
+          </form>
+          <p id="mensaje-asistencia" role="status" aria-live="polite"></p>
+          <a href="historial-asistencia.html">Ver historial de asistencias</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="storage.js"></script>
+  <script src="asistencia.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+AVANCE DEL MÓDULO DE ASISTENCIA – NEO GOKU FIT
+
+Integré el módulo de control de asistencia al proyecto.
+
+Cambios realizados:
+- Agregué una página para registrar asistencia de usuarios existentes.
+- Conecté la lista de usuarios mediante storage.js.
+- Incorporé fecha, hora de ingreso y hora de salida.
+- Creé una página separada para consultar el historial de asistencias.
+- Agregué opciones para modificar y eliminar registros.
+- Integré los accesos al módulo desde el Dashboard.
+- Los registros se guardan en localStorage.
+
+Pendiente:
+- Mejorar el estilo del botón «Ver historial».
+- Completar las pruebas finales de integración.
+
+Nota: Se conservaron las funciones principales de gestión de usuarios de Lucas.
