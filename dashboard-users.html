@@ -15,6 +15,8 @@
         <ul class="sidebar-menu">
             <li><a href="#">Inicio</a></li>
             <li><a href="dashboard-users.html" class="active">Usuarios</a></li>
+            <li><a href="asistencia.html">Asistencia</a></li>
+            <li><a href="historial-asistencia.html">Ver historial</a></li>
             <li><a href="index.html">Cerrar sesión</a></li>
         </ul>
     </nav>
@@ -26,6 +28,8 @@
                 <button type="button" id="modal-open-create">Crear usuario</button>
                 <button type="button" id="modal-open-update">Modificar usuario</button>
                 <button type="button" id="modal-open-delete">Eliminar usuario</button>
+                <button type="button" id="modal-open-register" onclick="window.location.href='asistencia.html'">Registrar asistencia</button>
+                <button type="button" onclick="window.location.href='historial-asistencia.html'">Ver historial</button>
             </div>
             <table id="users-table">
                 <thead>
@@ -85,11 +89,12 @@
                 <label for="user-email-delete">Email (UID):</label>
                 <input type="email" id="user-email-delete">
             </div>
-            <div class="modal-footer">
+            <div class="">
                 <button type="button" id="modal-delete-button-close">Cerrar</button>
                 <button type="button" id="modal-delete-button-save">Confirmar</button>
             </div>
         </dialog>
+    
     </main>
     <script src="storage.js"></script>
     <script src="dashboard-users.js"></script>

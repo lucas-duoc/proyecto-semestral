@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial de asistencia - Neo Goku Fit</title>
+  <link rel="stylesheet" href="dashboard-styles.css">
+  <link rel="stylesheet" href="asistencia.css">
+</head>
+<body>
+  <nav class="sidebar">
+    <a href="index.html" class="navbar-brand"><span class="navbar-icon">Ѫ</span><span class="navbar-text">Neo Goku Fit</span></a>
+    <ul class="sidebar-menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="dashboard-users.html">Usuarios</a></li>
+      <li><a href="asistencia.html">Asistencia</a></li>
+      <li><a href="historial-asistencia.html" class="active">Ver historial</a></li>
+      <li><a href="index.html">Cerrar sesión</a></li>
+    </ul>
+  </nav>
+  <main class="asistencia-main">
+    <h1>Historial de asistencias</h1>
+    <p>Consulta y administra los registros guardados.</p>
+    <section class="panel">
+      <label for="filtro-usuario">Buscar usuario</label>
+      <input id="filtro-usuario" type="search" placeholder="Nombre o correo electrónico">
+      <div class="tabla-scroll">
+        <table class="tabla-asistencia">
+          <thead><tr><th>Usuario</th><th>Fecha</th><th>Hora</th><th>Tipo</th><th>Acciones</th></tr></thead>
+          <tbody id="tabla-asistencias"></tbody>
+        </table>
+      </div>
+    </section>
+    <section class="panel" id="panel-edicion" hidden>
+      <h2>Modificar asistencia</h2>
+      <form id="form-edicion">
+        <div class="form-grid">
+          <div><label for="editar-fecha">Fecha</label><input id="editar-fecha" type="date" required></div>
+          <div><label for="editar-hora">Hora</label><input id="editar-hora" type="time" required></div>
+          <div><label for="editar-tipo">Tipo</label><select id="editar-tipo"><option value="Ingreso">Ingreso</option><option value="Salida">Salida</option></select></div>
+        </div>
+        <div class="acciones"><button type="submit">Guardar modificación</button><button type="button" id="cancelar-edicion">Cancelar</button></div>
+      </form>
+    </section>
+  </main>
+  <script src="storage.js"></script>
+  <script src="historial-asistencia.js"></script>
+</body>
+</html>
