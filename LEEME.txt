@@ -1,9 +1,0 @@
-Neo Goku Fit - Proyecto integrado
-
-Abre index.html para comenzar.
-Registrar asistencia y Ver historial son páginas separadas.
-Se conserva storage.js de Lucas y la clave neoGokuFitAsistenciasV1.
-
-IMPORTANTE: No se recibieron los GIF de la carpeta assets/.
-Para ver el fondo animado original, copia la carpeta assets del proyecto original junto a index.html.
-Los datos se guardan en localStorage del navegador, no se comparten entre dispositivos.
