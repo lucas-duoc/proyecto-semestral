@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membresía - Neo Goku Fit</title>
+  <link rel="stylesheet" href="dashboard-styles.css">
+  <link rel="stylesheet" href="membresia.css">
+</head>
+<body>
+  <nav class="sidebar">
+    <a href="index.html" class="navbar-brand">
+      <span class="navbar-icon">Ѫ</span>
+      <span class="navbar-text">Neo Goku Fit</span>
+    </a>
+    <ul class="sidebar-menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="dashboard-users.html">Usuarios</a></li>
+      <li><a href="asistencia.html">Asistencia</a></li>
+      <li><a href="historial-asistencia.html">Ver historial</a></li>
+
+      <li><a href="membresia.html" class="active">Membresías</a></li>
+      <li><a href="index.html">Cerrar sesión</a></li>
+    </ul>
+  </nav>
+  
+  <main class="membresia-main">
+    <h1>Gestión de Membresías</h1>
+    <p>Administra los planes y pagos de los usuarios registrados.</p>
+    
+
+    <div class="panel">
+      <h2>Asignar o Renovar Membresía</h2>
+      <form id="form-membresia">
+       
+        <label for="buscar-usuario-membresia">Buscar usuario (Email)</label>
+        <input type="search" id="buscar-usuario-membresia" placeholder="ejemplo@correo.com" required>
+        
+        <label for="tipo-plan">Plan</label>
+        <select id="tipo-plan" required>
+          <option value="">Seleccione un plan</option>
+          <option value="mensual">Mensual - $30.000</option>
+          <option value="trimestral">Trimestral - $80.000</option>
+          <option value="anual">Anual - $250.000</option>
+        </select>
+
+        <label for="fecha-inicio">Fecha de inicio</label>
+        <input type="date" id="fecha-inicio" required>
+
+        <div class="acciones" style="margin-top: 20px;">
+          <button type="submit">Guardar Membresía</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+
+  <script src="storage.js"></script>
+  <script src="membresia.js"></script>
+</body>
+</html>
