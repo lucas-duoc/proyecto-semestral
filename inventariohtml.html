@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario - Neo Goku Fit</title>
+  <link rel="stylesheet" href="dashboard-styles.css">
+  <link rel="stylesheet" href="inventario.css">
+</head>
+<body>
+  <nav class="sidebar">
+    <a href="index.html" class="navbar-brand">
+      <span class="navbar-icon">Ѫ</span>
+      <span class="navbar-text">Neo Goku Fit</span>
+    </a>
+    <ul class="sidebar-menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="dashboard-users.html">Usuarios</a></li>
+      <li><a href="asistencia.html">Asistencia</a></li>
+      <li><a href="historial-asistencia.html">Ver historial</a></li>
+      <li><a href="membresia.html">Gestionar Membresía</a></li>
+      <li><a href="inventario.html" class="active">Inventario</a></li>
+      <li><a href="index.html">Cerrar sesión</a></li>
+    </ul>
+  </nav>
+
+  <main class="inventario-main">
+    <h1>Inventario del gimnasio</h1>
+    <p>Controla las máquinas, accesorios y suplementos disponibles en el gimnasio.</p>
+
+    <div class="inventario-layout">
+      <section class="panel">
+        <h2 id="titulo-formulario">Agregar artículo</h2>
+        <form id="form-inventario" novalidate>
+          <label for="nombre-item">Nombre</label>
+          <input type="text" id="nombre-item" placeholder="Ej: Mancuernas 10 kg">
+
+          <label for="categoria-item">Categoría</label>
+          <select id="categoria-item">
+            <option value="">Seleccione una categoría</option>
+            <option value="Máquinas">Máquinas</option>
+            <option value="Pesas">Pesas</option>
+            <option value="Accesorios">Accesorios</option>
+            <option value="Suplementos">Suplementos</option>
+            <option value="Limpieza">Limpieza</option>
+          </select>
+
+          <div class="form-grid">
+            <div>
+              <label for="cantidad-item">Cantidad</label>
+              <input type="number" id="cantidad-item" min="0" step="1">
+            </div>
+            <div>
+              <label for="precio-item">Precio unitario ($)</label>
+              <input type="number" id="precio-item" min="0" step="1">
+            </div>
+          </div>
+
+          <label for="fecha-item">Fecha de ingreso</label>
+          <input type="date" id="fecha-item">
+
+          <p id="mensaje-inventario" role="status" aria-live="polite"></p>
+
+          <div class="acciones">
+            <button type="submit" id="guardar-item">Guardar artículo</button>
+            <button type="button" id="cancelar-edicion" hidden>Cancelar</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Artículos registrados</h2>
+        <div class="filtros">
+          <input type="search" id="buscar-item" placeholder="Buscar por nombre">
+          <select id="filtro-categoria">
+            <option value="">Todas las categorías</option>
+            <option value="Máquinas">Máquinas</option>
+            <option value="Pesas">Pesas</option>
+            <option value="Accesorios">Accesorios</option>
+            <option value="Suplementos">Suplementos</option>
+            <option value="Limpieza">Limpieza</option>
+          </select>
+        </div>
+
+        <div class="resumen">
+          <span id="total-articulos">Artículos: 0</span>
+          <span id="total-unidades">Unidades: 0</span>
+          <span id="valor-total">Valor total: $0</span>
+        </div>
+
+        <div class="tabla-scroll">
+          <table id="tabla-inventario">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Ingreso</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpo-inventario"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="inventario.js"></script>
+</body>
+</html>
