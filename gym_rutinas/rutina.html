@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo de Rutinas</title>
+    <link rel="stylesheet" href="rutina.css">
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <h1>Módulo de Rutinas</h1>
+
+        <form id="formularioRutina">
+
+            <div class="campo">
+                <label>Nombre de la rutina</label>
+                <input type="text" id="nombreRutina" placeholder="Ej: Pecho y tríceps">
+            </div>
+
+            <div class="campo">
+                <label>Ejercicio</label>
+                <input type="text" id="ejercicio" placeholder="Ej: Press banca">
+            </div>
+
+            <div class="campo">
+                <label>Series</label>
+                <input type="number" id="series" placeholder="Ej: 4">
+            </div>
+
+            <div class="campo">
+                <label>Repeticiones</label>
+                <input type="number" id="repeticiones" placeholder="Ej: 10">
+            </div>
+
+            <button type="submit">Agregar rutina</button>
+
+        </form>
+
+        <h2>Rutinas registradas</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Rutina</th>
+                    <th>Ejercicio</th>
+                    <th>Series</th>
+                    <th>Repeticiones</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablaRutinas">
+                <!-- Las rutinas aparecerán aquí -->
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="rutinaa.js"></script>
+</body>
+</html>
